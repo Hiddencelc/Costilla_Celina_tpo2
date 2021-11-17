@@ -488,9 +488,7 @@ public class AltaMascota extends javax.swing.JFrame {
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
          
-        // cuando se limpiamos el formulario, el numero de cliente aparece directamente.
         
-        generarCliente();
             
         //limpiamos el formulario usando el metodo setText y pasando parametros vacios.
         txtNombre.setText("");
@@ -536,9 +534,14 @@ public class AltaMascota extends javax.swing.JFrame {
 
             control.crearMascota(cliente, nombre, raza, color, alergico, atencion, duenio, telefono, obs);
             JOptionPane.showMessageDialog(this, "Datos guardados con éxito.", "INGRESO DE DATOS CORRECTOS", 1);
-
+          
+         // solo si guardamos el formulario, el numero de cliente aparece directamente.
+        
+            generarCliente();
            
         }
+        
+        
 
 
     }//GEN-LAST:event_btnGuardarActionPerformed
